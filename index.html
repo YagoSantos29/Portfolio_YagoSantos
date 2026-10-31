@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yago Santos</title>
+<meta name="description" content="Portfólio de Yago Santos da Silva, estudante de Desenvolvimento de Sistemas no SENAI Palhoça. Node.js, JavaScript, React, HTML e CSS. Em busca da primeira vaga como desenvolvedor back-end.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232457d6'/%3E%3Ctext x='16' y='23' font-size='20' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='white'%3EY%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f5f9;--surface:#fff;--ink:#111a2e;--muted:#53607a;--line:#d9deea;--accent:#2457d6;--accent-ink:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1020;--surface:#121a31;--ink:#e8edf8;--muted:#9aa7c4;--line:#243052;--accent:#6ea2ff;--accent-ink:#0b1020}}
+:root[data-theme="dark"]{--bg:#0b1020;--surface:#121a31;--ink:#e8edf8;--muted:#9aa7c4;--line:#243052;--accent:#6ea2ff;--accent-ink:#0b1020}
+html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",sans-serif;line-height:1.1;margin:0;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.logo{font:800 20px "Bricolage Grotesque",sans-serif;text-decoration:none}
+.logo span{color:var(--accent)}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:15px}
+nav ul a{text-decoration:none;color:var(--muted)}
+nav ul a:hover{color:var(--ink)}
+.tools{display:flex;gap:8px}
+.tool{height:36px;min-width:36px;padding:0 12px;border-radius:6px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:500 14px "IBM Plex Sans",sans-serif;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+.tool:hover{border-color:var(--accent)}
+.tool svg{width:18px;height:18px}
+section{padding:84px 0}
+.hero{padding:96px 0 64px;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(40px,6.4vw,72px);font-weight:800}
+.hero p.lead{font-size:19px;color:var(--muted);max-width:52ch;margin:22px 0 30px}
+.badge{font-size:16px;color:var(--muted);margin-bottom:18px}
+.stack{margin:40px 0 0;color:var(--muted);font:400 14px "IBM Plex Mono",monospace}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 20px;border-radius:4px;font-weight:500;text-decoration:none;border:1px solid var(--line);background:transparent}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+h2{font-size:clamp(30px,4vw,44px);font-weight:700;margin-bottom:28px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.about p{margin:0 0 16px;color:var(--muted)}
+.about p:first-child{color:var(--ink)}
+.facts{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.facts li{padding:14px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px}
+.facts b{font-weight:500;color:var(--muted)}
+.facts span{text-align:right}
+.skills{border-top:1px solid var(--line)}
+.skill{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.skill strong{font:700 20px "Bricolage Grotesque",sans-serif}
+.skill small{color:var(--muted);font-size:14px}
+.projects{border-top:1px solid var(--line)}
+.card{display:grid;grid-template-columns:1fr 1.6fr;gap:8px 32px;padding:26px 0;border-bottom:1px solid var(--line)}
+.card h3{grid-row:span 3}
+.card p,.card .tags,.card .links{grid-column:2}
+.links{display:flex;gap:22px;flex-wrap:wrap}
+.card h3{font-size:22px}
+.card p{margin:0;color:var(--muted);font-size:16px}
+.tags{display:flex;flex-wrap:wrap;gap:14px}
+.tags span{font:400 13px "IBM Plex Mono",monospace;color:var(--muted)}
+.card a{color:var(--accent);font-weight:500;text-decoration:none}
+.card a:hover{text-decoration:underline}
+.contact{border-top:1px solid var(--line);padding-top:40px}
+.contact p{max-width:54ch;margin:0 0 12px;color:var(--muted)}
+.mail{display:inline-block;margin-bottom:28px;font:500 18px "IBM Plex Mono",monospace;color:var(--accent);text-decoration:none;word-break:break-all}
+footer{padding:36px 0;color:var(--muted);font-size:14px;text-align:center}
+@media (max-width:760px){
+  .about,.card{grid-template-columns:1fr}
+  .card h3{grid-row:auto}
+  .card p,.card .tags,.card .links{grid-column:1}
+  section{padding:60px 0}
+  nav ul{display:none}
+}
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
+:root.fade *{transition:background-color .4s,color .4s,border-color .4s}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav aria-label="Principal">
+  <a class="logo" href="#inicio">yago<span>.dev</span></a>
+  <ul>
+    <li><a href="#sobre" data-i="nav_about">Sobre</a></li>
+    <li><a href="#habilidades" data-i="nav_skills">Habilidades</a></li>
+    <li><a href="#projetos" data-i="nav_projects">Projetos</a></li>
+    <li><a href="#contato" data-i="nav_contact">Contato</a></li>
+  </ul>
+  <div class="tools">
+    <button class="tool" id="lang" type="button" aria-label="Mudar idioma / Change language">EN</button>
+    <button class="tool" id="theme" type="button" aria-label="Alternar tema"></button>
+  </div>
+</nav></div></header>
+
+<main><div class="wrap">
+<section class="hero" id="inicio">
+  <div>
+    <div class="badge" data-i="badge">Em busca da primeira vaga como desenvolvedor back-end</div>
+    <h1>Yago Santos da Silva</h1>
+    <p class="lead" data-i="lead">Desenvolvedor back-end em início de carreira e estudante de Desenvolvimento de Sistemas no SENAI Palhoça. Construo aplicações e APIs com Node.js e JavaScript.</p>
+    <div class="btns"><a class="btn primary" href="#projetos" data-i="cta1">Ver projetos</a><a class="btn" href="#contato" data-i="cta2">Entrar em contato</a></div>
+    <p class="stack">Node.js, Express, MySQL, JavaScript, React</p>
+  </div>
+</section>
+
+<section id="sobre">
+  <h2 data-i="about_h">Sobre mim</h2>
+  <div class="about">
+    <div>
+      <p data-i="about_1">Olá! Me chamo Yago Santos da Silva, sou desenvolvedor back-end em início de carreira e estudante do curso Técnico em Desenvolvimento de Sistemas no SENAI de Palhoça.</p>
+      <p data-i="about_2">Gosto de entender o que acontece por trás da tela: a lógica, as regras de negócio e as APIs que fazem uma aplicação funcionar. Aprendo testando ideias e construindo projetos.</p>
+      <p data-i="about_3">Estou no começo da trajetória e busco minha primeira vaga como desenvolvedor back-end, para aprender com um time, ganhar experiência e participar de projetos reais.</p>
+    </div>
+    <ul class="facts">
+      <li><b data-i="f1k">Formação</b><span data-i="f1v">Técnico em Desenvolvimento de Sistemas</span></li>
+      <li><b data-i="f2k">Instituição</b><span>SENAI Palhoça</span></li>
+      <li><b data-i="f3k">Foco</b><span data-i="f3v">Back-end com Node.js</span></li>
+      <li><b data-i="f4k">Objetivo</b><span data-i="f4v">Primeira vaga como back-end</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="habilidades">
+  <h2 data-i="skills_h">Habilidades</h2>
+  <div class="skills">
+    <div class="skill"><strong>Node.js</strong><small data-i="s5">APIs e servidor</small></div>
+    <div class="skill"><strong>Express</strong><small data-i="s6">Rotas e API REST</small></div>
+    <div class="skill"><strong>MySQL</strong><small data-i="s7">Banco de dados com Sequelize</small></div>
+    <div class="skill"><strong>JavaScript</strong><small data-i="s3">Lógica e regras de negócio</small></div>
+    <div class="skill"><strong>React</strong><small data-i="s4">Consumo de APIs no front-end</small></div>
+    <div class="skill"><strong>HTML</strong><small data-i="s1">Base das interfaces</small></div>
+    <div class="skill"><strong>CSS</strong><small data-i="s2">Estilo e responsividade</small></div>
+  </div>
+</section>
+
+<section id="projetos">
+  <h2 data-i="proj_h">Projetos</h2>
+  <div class="projects">
+    <article class="card"><h3 data-i="p1t">Sistema Escolar Full Stack</h3><p data-i="p1d">Aplicação para gerenciar uma escola: usuários, alunos, turmas, matrículas e notas. Tem login com JWT e três perfis de acesso (administrador, professor e aluno). API REST em Node.js, Express e Sequelize com MySQL, e interface em React. Feito em grupo com Nicolas e Gregory.</p><div class="tags"><span>Node.js</span><span>Express</span><span>Sequelize</span><span>MySQL</span><span>JWT</span><span>React</span></div><div class="links"><a href="https://github.com/YagoSantos29/ProjetoFinal_FullStack" target="_blank" rel="noopener" data-i="code">Ver código</a></div></article>
+    <article class="card"><h3 data-i="p2t">Chat em Tempo Real</h3><p data-i="p2d">Chat com WebSocket em que o usuário cria salas, entra nelas e troca mensagens na hora, sem recarregar a página. Servidor em Node.js com Socket.IO e interface em HTML, CSS e JavaScript.</p><div class="tags"><span>Node.js</span><span>Socket.IO</span><span>JavaScript</span></div><div class="links"><a href="https://github.com/YagoSantos29/Sistema-WebSocket" target="_blank" rel="noopener" data-i="code">Ver código</a></div></article>
+    <article class="card"><h3 data-i="p3t">API REST com CRUD</h3><p data-i="p3d">Projeto acadêmico em dupla com Pedro para praticar API REST, integração com MySQL e operações CRUD, com foco em organização de código. Tem uma interface com tema escuro publicada na Vercel.</p><div class="tags"><span>Node.js</span><span>MySQL</span><span>API REST</span></div><div class="links"><a href="https://github.com/YagoSantos29/TrabalhoBruno-Yago-Pedro" target="_blank" rel="noopener" data-i="code">Ver código</a><a href="https://trabalho-bruno-yago-pedro.vercel.app" target="_blank" rel="noopener" data-i="demo">Ver demo</a></div></article>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="contact">
+    <h2 data-i="contact_h">Vamos conversar?</h2>
+    <p data-i="contact_p">Estou em busca da minha primeira vaga como desenvolvedor back-end. Se você tem uma oportunidade em que eu possa aprender e contribuir, me chame.</p>
+    <a class="mail" href="mailto:yagosilva3014@gmail.com">yagosilva3014@gmail.com</a>
+    <div class="btns">
+      <a class="btn primary" href="mailto:yagosilva3014@gmail.com" data-i="mail_btn">Enviar e-mail</a>
+      <a class="btn" href="https://github.com/YagoSantos29" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/yago-santos-ba60072b1/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+</div></main>
+<footer>© 2026 Yago Santos da Silva</footer>
+
+<script>
+const T={
+pt:{nav_about:"Sobre",nav_skills:"Habilidades",nav_projects:"Projetos",nav_contact:"Contato",badge:"Em busca da primeira vaga como desenvolvedor back-end",lead:"Desenvolvedor back-end em início de carreira e estudante de Desenvolvimento de Sistemas no SENAI Palhoça. Construo aplicações e APIs com Node.js e JavaScript.",cta1:"Ver projetos",cta2:"Entrar em contato",about_h:"Sobre mim",about_1:"Olá! Me chamo Yago Santos da Silva, sou desenvolvedor back-end em início de carreira e estudante do curso Técnico em Desenvolvimento de Sistemas no SENAI de Palhoça.",about_2:"Gosto de entender o que acontece por trás da tela: a lógica, as regras de negócio e as APIs que fazem uma aplicação funcionar. Aprendo testando ideias e construindo projetos.",about_3:"Estou no começo da trajetória e busco minha primeira vaga como desenvolvedor back-end, para aprender com um time, ganhar experiência e participar de projetos reais.",f1k:"Formação",f1v:"Técnico em Desenvolvimento de Sistemas",f2k:"Instituição",f3k:"Foco",f3v:"Back-end com Node.js",f4k:"Objetivo",f4v:"Primeira vaga como back-end",skills_h:"Habilidades",s1:"Base das interfaces",s2:"Estilo e responsividade",s3:"Lógica e regras de negócio",s4:"Consumo de APIs no front-end",s5:"APIs e servidor",s6:"Rotas e API REST",s7:"Banco de dados com Sequelize",demo:"Ver demo",proj_h:"Projetos",p1t:"Sistema Escolar Full Stack",p1d:"Aplicação para gerenciar uma escola: usuários, alunos, turmas, matrículas e notas. Tem login com JWT e três perfis de acesso (administrador, professor e aluno). API REST em Node.js, Express e Sequelize com MySQL, e interface em React. Feito em grupo com Nicolas e Gregory.",p2t:"Chat em Tempo Real",p2d:"Chat com WebSocket em que o usuário cria salas, entra nelas e troca mensagens na hora, sem recarregar a página. Servidor em Node.js com Socket.IO e interface em HTML, CSS e JavaScript.",p3t:"API REST com CRUD",p3d:"Projeto acadêmico em dupla com Pedro para praticar API REST, integração com MySQL e operações CRUD, com foco em organização de código. Tem uma interface com tema escuro publicada na Vercel.",code:"Ver código",contact_h:"Vamos conversar?",contact_p:"Estou em busca da minha primeira vaga como desenvolvedor back-end. Se você tem uma oportunidade em que eu possa aprender e contribuir, me chame.",mail_btn:"Enviar e-mail"},
+en:{nav_about:"About",nav_skills:"Skills",nav_projects:"Projects",nav_contact:"Contact",badge:"Looking for my first back-end developer role",lead:"Early-career back-end developer and Systems Development student at SENAI Palhoça. I build applications and APIs with Node.js and JavaScript.",cta1:"See projects",cta2:"Get in touch",about_h:"About me",about_1:"Hi! My name is Yago Santos da Silva, I'm an early-career back-end developer and a Systems Development Technician student at SENAI in Palhoça, Brazil.",about_2:"I like understanding what happens behind the screen: the logic, the business rules and the APIs that make an application work. I learn by testing ideas and building projects.",about_3:"I'm at the beginning of my journey and looking for my first back-end developer role, to learn from a team, gain experience and take part in real projects.",f1k:"Education",f1v:"Systems Development Technician",f2k:"School",f3k:"Focus",f3v:"Back-end with Node.js",f4k:"Goal",f4v:"First back-end role",skills_h:"Skills",s1:"Base of the interfaces",s2:"Styling and responsiveness",s3:"Logic and business rules",s4:"Consuming APIs on the front end",s5:"APIs and server",s6:"Routes and REST API",s7:"Database with Sequelize",demo:"View demo",proj_h:"Projects",p1t:"Full Stack School System",p1d:"App to manage a school: users, students, classes, enrollments and grades. It has JWT login and three access roles (administrator, teacher and student). REST API in Node.js, Express and Sequelize with MySQL, and a React interface. Built as a team with Nicolas and Gregory.",p2t:"Real-Time Chat",p2d:"WebSocket chat where users create rooms, join them and exchange messages instantly, without reloading the page. Node.js server with Socket.IO and an HTML, CSS and JavaScript interface.",p3t:"REST API with CRUD",p3d:"Academic project with Pedro to practice REST APIs, MySQL integration and CRUD operations, focused on code organization. Includes a dark-theme interface deployed on Vercel.",code:"View code",contact_h:"Let's talk?",contact_p:"I'm looking for my first back-end developer role. If you have an opportunity where I can learn and contribute, get in touch.",mail_btn:"Send email"}
+};
+const root=document.documentElement;
+function store(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+function load(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function setLang(l){
+  root.lang=l==="en"?"en":"pt-BR";
+  document.querySelectorAll("[data-i]").forEach(el=>{const v=T[l][el.dataset.i];if(v!==undefined)el.textContent=v});
+  document.getElementById("lang").textContent=l==="en"?"PT":"EN";
+  document.title=l==="en"?"Yago Santos da Silva · Back-end Developer":"Yago Santos da Silva · Desenvolvedor Back-end";
+  store("lang",l);
+}
+function isDark(){const t=root.dataset.theme;return t?t==="dark":matchMedia("(prefers-color-scheme: dark)").matches}
+const SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
+const MOON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
+function setTheme(t){root.dataset.theme=t;document.getElementById("theme").innerHTML=t==="dark"?SUN:MOON;store("theme",t)}
+document.getElementById("lang").onclick=()=>setLang(root.lang==="en"?"pt":"en");
+function toggleTheme(){
+  const next=isDark()?"light":"dark";
+  const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(!document.startViewTransition||reduce){
+    if(!reduce){root.classList.add("fade");setTimeout(()=>root.classList.remove("fade"),500)}
+    setTheme(next);return;
+  }
+  const r=document.getElementById("theme").getBoundingClientRect();
+  const x=r.left+r.width/2,y=r.top+r.height/2;
+  const end=Math.hypot(Math.max(x,innerWidth-x),Math.max(y,innerHeight-y));
+  const t=document.startViewTransition(()=>setTheme(next));
+  t.ready.then(()=>{root.animate({clipPath:[`circle(0px at ${x}px ${y}px)`,`circle(${end}px at ${x}px ${y}px)`]},{duration:550,easing:"ease-in-out",pseudoElement:"::view-transition-new(root)"})});
+}
+document.getElementById("theme").onclick=toggleTheme;
+const sl=load("lang"),st=load("theme");
+setLang(sl||(navigator.language||"pt").toLowerCase().startsWith("en")?(sl||"en"):"pt");
+setTheme(st||(isDark()?"dark":"light"));
+</script>
+</body>
+</html>
